@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 
+/*<-- CSS RESSET -->*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,6 +25,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -47,14 +50,13 @@ table {
 	border-spacing: 0;
 }
 
+ /*<-- GENERAL STYLES -->*/
+
 
 body{
 	font: normal 16px Arial, Helvetica, sans-serif;
 }
 
-.col-md-10 h2{
-	text-align: center;
-}
 
 h1, h3{
 	font: normal 24px 'Open Sans', Arial, Helvetica, sans-serif;
@@ -77,10 +79,13 @@ h1, h3{
 	padding-bottom: 20px;
 }
 
+/*<-- FILTERS -->*/
+
 
 .filters-col {
 	margin-bottom: 15px;
 }
+
 
 .filters{
 	box-sizing: border-box;
@@ -95,9 +100,14 @@ h1, h3{
 	width: 100%;
 }
 
+.filters form {
+	width: 180px;
+}
+
 .filters .filter-criteria{
 	display: block;
 	margin: 10px 0 10px;
+	width: 100%;
 }
 
 .filters span{
@@ -130,6 +140,13 @@ h1, h3{
 	width: 95px;
 	height: 32px;
 	margin-top: 10px;
+}
+
+
+/*<-- PRODUCTS CONTENT -->*/
+
+.col-md-10 h2{
+	text-align: center;
 }
 
 .col-md-10 h2 {
@@ -186,15 +203,12 @@ h1, h3{
 
 .products-list .product-description{
 	margin-top: 20px;
-
 	color: #5d5d5d;
 	font-size: 14px;
 	line-height: 1.45;
 	white-space: normal;
-
 	max-width: 260px;
 	margin-bottom: 20px;
-
 	list-style: none;
 }
 
@@ -245,11 +259,7 @@ h1, h3{
 	}
 	.products-list .product {
 		 width: 100%;
-
-	}
-}
-
-@media (max-width: 800px){
+  }
 
 	.products-list li {
 		width: 47%;
