@@ -10,11 +10,10 @@ $(document).ready(function() {
        mainProducts.list.push(val);
      });
 
-     console.log(mainProducts);
      var showRes ='';
 
      $.each(mainProducts.list,function(idx,val) {
-         showRes += "<li>";
+         showRes += "<li class=\"product\">";
          showRes += "<a href=\"#\" class=\"product-photo\">";
          showRes += "<img src=\"" + 'http:'+val.image.small+"\""+"height=\"130\""+"/>";
          showRes += "<a/>";
@@ -83,8 +82,10 @@ $(document).ready(function() {
         }//end filters
 
         var filtered = applyFilters(products.list, checkboxes);
-        if(filtered.length <1) {
-          alert('no maches');
+        if(filtered.length < 1) {
+          $('.col-md-10 h2').removeClass("hide");
+        } else {
+          $('.col-md-10 h2').addClass("hide");
         }
         var showFilteredRes ='';
 
