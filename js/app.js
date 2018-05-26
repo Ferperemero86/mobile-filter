@@ -51,11 +51,11 @@ $(document).ready(function() {
 
       $('.products-list').html(showRes);
 
-      $('input[type=checkbox]').click(function() {
+
 
         //Call function event when checkbox status changes
         $('input').change(function() {
-        //Create objectfor taking all the checked checkboxes values
+        //Create object for taking all the checked checkboxes values
 
           var checkboxes = {};
           var value = $('input[type=checkbox]:checked');
@@ -81,19 +81,20 @@ $(document).ready(function() {
             }
           });//End each function
 
+        //Apply the filters to the products
         var filtered = applyFilters(products.list, checkboxes);
         if(filtered.length < 1) {
           $('.col-md-10 h2').removeClass("hide");
         } else {
           $('.col-md-10 h2').addClass("hide");
         }
-
+        //Show filtered results
         var showFilteredRes = showProducts(filtered);
         $('.products-list').html(showFilteredRes);
 
 
      });//End Change function
-   });//End click
+  
 
         //Clear checkboxes and empty products display and checkboxes array
         $('form').submit(function(e) {
